@@ -3,8 +3,6 @@ body{
   background-color: aliceblue !important; 
 }
 
-
-
 .todo-item{
   border: 1px solid lightblue;
   background-color: white;
@@ -45,7 +43,7 @@ body{
   background-color: white;
   border: 2px solid lightblue;
   color: lightblue;
-  margin: 10px;
+  margin: 5px;
 }
 .button-delete:hover{
   background-color: lightblue;
@@ -55,4 +53,5 @@ body{
 .item-complete{
   background-color: gainsboro;
   color:white;
+  text-decoration: line-through black;
 }
