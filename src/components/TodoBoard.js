@@ -1,6 +1,5 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-import {Spinner} from "react-bootstrap";
 
 const TodoBoard = ({todoList, updateComplete, deleteTask, index}) => {
     return (
@@ -13,7 +12,7 @@ const TodoBoard = ({todoList, updateComplete, deleteTask, index}) => {
                                                    deleteTask={deleteTask}/>)
                 :
                 <div className='box'>
-                    <Spinner/>
+                    <h1>할일을 입력해주세요. 😄</h1>
                 </div>
             }
         </div>
