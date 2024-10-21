@@ -4,10 +4,12 @@ import api from "../utils/api";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import {useNavigate} from "react-router-dom";
 
 const TodoPage = () => {
   const [todoList, setTodoList] = useState([]);
   const [todoValue, setTodoValue] = useState('');
+  const navigate = useNavigate();
 
   // 할일 목록을 불러온다.
   const getTasks = async () => {
@@ -62,6 +64,9 @@ const TodoPage = () => {
   }
 
   useEffect(() => {
+    if (!sessionStorage.getItem('token')) {
+      navigate('/login');
+    }
     getTasks();
   }, []);
 
