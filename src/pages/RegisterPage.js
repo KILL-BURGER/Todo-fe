@@ -25,6 +25,7 @@ const RegisterPage = () => {
         throw new Error(response.data.error);
       }
     } catch (err) {
+      // 필드에러
       if (err.message.name) {
         setError(err.message.name.message);
       } else if (err.message.email) {
