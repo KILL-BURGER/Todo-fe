@@ -19,14 +19,12 @@ const RegisterPage = () => {
         throw new Error('패스워드가 일치하지 않습니다.')
       } else {
         const response = await api.post('/user', {name, email, password});
-        console.log('rrrrr', response);
         if (response.status === 200) {
           navigate('/login');
         }
         throw new Error(response.data.error);
       }
     } catch (err) {
-      console.log('rrrrrr',err);
       if (err.message.name || err.message.email || err.message.password) {
         setError('전부 입력해주세요.');
       } else {
