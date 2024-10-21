@@ -25,8 +25,12 @@ const RegisterPage = () => {
         throw new Error(response.data.error);
       }
     } catch (err) {
-      if (err.message.name || err.message.email || err.message.password) {
-        setError('전부 입력해주세요.');
+      if (err.message.name) {
+        setError(err.message.name.message);
+      } else if (err.message.email) {
+        setError(err.message.email.message);
+      } else if (err.message.password) {
+        setError(err.message.password.message);
       } else {
         setError(err.message);
       }
