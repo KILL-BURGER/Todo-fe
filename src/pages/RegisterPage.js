@@ -62,8 +62,13 @@ const RegisterPage = () => {
                         onChange={(event) => setSecPassword(event.target.value)}/>
         </Form.Group>
 
-        <Button className="button-primary" type="submit">
+        <Button className="button-primary" type="submit" style={{marginRight: '10px'}}>
           회원가입
+        </Button>
+        <Button className="button-primary" onClick={() => {
+          navigate('/login');
+        }}>
+          로그인
         </Button>
       </Form>
     </div>
