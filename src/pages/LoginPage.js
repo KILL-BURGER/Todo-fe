@@ -1,14 +1,13 @@
 import React, {useState} from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, Navigate, useNavigate} from "react-router-dom";
 import api from "../utils/api";
 
-const LoginPage = () => {
+const LoginPage = ({setUser, user}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
   const handleLoginSubmit = async (event) => {
@@ -26,6 +25,10 @@ const LoginPage = () => {
     } catch (err) {
       setError(err.message);
     }
+  };
+
+  if (user) {
+    return <Navigate to='/'/>
   }
 
   return (

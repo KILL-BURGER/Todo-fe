@@ -56,6 +56,16 @@ button {
     margin: 5px;
 }
 
+.button-logout {
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+    color: white;
+}
+
 .button-delete:hover {
     background-color: lightblue;
     color: #ffffff;
