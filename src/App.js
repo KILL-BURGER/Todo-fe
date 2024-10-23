@@ -28,10 +28,13 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={
-        <PrivateRoute user={user}>
-          <TodoPage setUser={setUser}/>
-        </PrivateRoute>}/>
+      <Route path="/"
+             element={
+               <PrivateRoute user={user}>
+                 <TodoPage setUser={setUser}/>
+               </PrivateRoute>
+             }
+      />
       <Route path="/register" element={<RegisterPage/>}/>
 
       <Route path="/login" element={<LoginPage setUser={setUser} user={user}/>}/>
