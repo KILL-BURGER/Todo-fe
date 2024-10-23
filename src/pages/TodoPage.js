@@ -92,10 +92,9 @@ const TodoPage = ({setUser}) => {
       </Row>
       <Row>
         <Col xs={12} sm={10}>
-          <button className="button-logout" onClick={logout}>로그아웃</button> {/* 로그아웃 버튼 */}
+          <button className="button-logout" onClick={logout}>로그아웃</button>
         </Col>
       </Row>
-
       <TodoBoard
         todoList={todoList}
         updateComplete={updateComplete}
