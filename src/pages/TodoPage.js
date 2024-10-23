@@ -52,7 +52,7 @@ const TodoPage = ({setUser}) => {
   // 할일 삭제.
   const deleteTask = async (id) => {
     try {
-      console.log('id', id);
+      // console.log('id', id);
       const response = await api.delete(`/tasks/${id}`);
       if (response.status === 200) {
         getTasks();

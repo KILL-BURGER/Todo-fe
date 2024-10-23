@@ -28,6 +28,7 @@ const LoginPage = ({setUser, user}) => {
   };
 
   if (user) {
+    console.log('로그인됨 투두페이지로');
     return <Navigate to='/'/>
   }
 

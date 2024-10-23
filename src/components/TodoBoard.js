@@ -1,12 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
-import {useNavigate} from "react-router-dom";
 
 const TodoBoard = ({todoList, updateComplete, deleteTask, index}) => {
-  const navigate = useNavigate();
-
-
-
   return (
     <div>
         <h2 style={{display: "inline"}}>Todo List</h2>
